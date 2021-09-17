@@ -1,7 +1,7 @@
 Basic component for order summary, can be used at the end of any website.
 
 How it looks like:
-![This is how it looks like](https://github.com/ahujaharshit15/order-card-component/blog/master/component.jpeg)
+![This is how it looks like](https://github.com/ahujaharshit15/order-card-component/blob/master/component.jpeg)
 
 
 "CardComponent" props=
