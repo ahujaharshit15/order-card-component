@@ -2,34 +2,31 @@ import React from "react";
 
 import "./FinalItem.css";
 
-const FinalItem = () => {
+const FinalItem = (props) => {
   return (
     <React.Fragment>
       <div class="items-list-div">
         <div class="avatar-div">
-          <img
-            alt="melody-avatar"
-            src="https://images.assetsdelivery.com/compings_v2/alekseyvanin/alekseyvanin1905/alekseyvanin190501464.jpg"
-          ></img>
+          <img alt="avatar" src={props.imgAvatar}></img>
         </div>
 
         <div class="content-box">
           <div class="content-title">
-            <p>Annual Plan</p>
+            <p>{props.itemName}</p>
           </div>
 
           <div class="content-info">
-            <p>$59.99/year</p>
+            <p>${props.price}/year</p>
           </div>
         </div>
 
         <div class="button-box">
-        <div class="button-text">
-        <p><a>Change</a></p>
+          <div class="button-text">
+            <p>
+              <a>Change</a>
+            </p>
+          </div>
         </div>
-           
-        </div>
-
       </div>
     </React.Fragment>
   );

@@ -3,31 +3,32 @@ import React from "react";
 import "./CardComponent.css";
 import FinalItem from "./FinalItem";
 
-const CardComponent = () => {
+const CardComponent = (props) => {
   return (
     <React.Fragment>
       <div class="outer-box">
         <div class="image-box">
-          <img
-            alt="scene"
-            src="https://miro.medium.com/max/1200/1*mk1-6aYaf_Bes1E3Imhc0A.jpeg"
-          ></img>
+          <img alt="scene" src={props.imgSource}></img>
         </div>
 
         <div class="main-content">
           <div class="content">
             <h1>Order Summary</h1>
-            <p>
-              You can now listen to millions of songs, audiobooks, and podcasts
-              on any device anywhere you like.
-            </p>
+            <p>{props.summary}</p>
           </div>
-          <FinalItem />
+
+          {/* Props to be used to pass in data about the product details and final additions to the cart. */}
+          <FinalItem
+            imgAvatar="https://images.assetsdelivery.com/compings_v2/alekseyvanin/alekseyvanin1905/alekseyvanin190501464.jpg"
+            itemName="Annual Plan"
+            price="59.99"
+          />
         </div>
+
         <div class="button-container">
           <form>
             <button class="jumbo-button" type="submit">
-             Proceed to Payment
+              Proceed to Payment
             </button>
 
             <button class="jumbo-button cancel-button" type="submit">
